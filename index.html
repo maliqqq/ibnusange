@@ -3,6 +3,17 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
+    
+    // init window height and width
+  var gameWidth = window.innerWidth
+  var gameHeight = window.innerHeight
+  var ratio = 1.5
+  if (gameHeight / gameWidth < ratio) {
+    gameWidth = Math.ceil(gameHeight / ratio)
+  }
+  $('.content').css({ "height": gameHeight + "px", "width": gameWidth + "px" })
+  $('.js-modal-content').css({ "width": gameWidth + "px" })
 
     <!-- 微信搜索公众号『 程序员鱼皮 』，学习编程技术，发现更多好玩的项目！ -->
     <title>AziziKeren</title>
